@@ -133,11 +133,20 @@
   $("langs").append(...D.languages.map((l) => el("li", { text: `${l.name}: ${l.level}` })));
 
   // ---------- Contact ----------
+  // Normalise URLs so a missing "https://" never turns into a relative link
+  const withScheme = (u) => /^(https?:|mailto:|tel:)/i.test(u) ? u : "https://" + u.replace(/^\/+/, "");
+  const linkedinUrl = (v) => {
+    v = (v || "").trim();
+    if (!v || v.includes("YOUR_")) return "";
+    if (!/[./]/.test(v)) return "https://www.linkedin.com/in/" + v;   // bare handle like "nitin-kashyap"
+    return withScheme(v);
+  };
+  const ghOk = D.github && !D.github.startsWith("YOUR_");
   const links = [
     ["✉ Email", "mailto:" + D.email],
     ["📞 " + D.phone, "tel:" + D.phone.replace(/[^+\d]/g, "")],
-    ["GitHub", "https://github.com/" + D.github],
-    ["LinkedIn", D.linkedin]
+    ...(ghOk ? [["GitHub", "https://github.com/" + D.github]] : []),
+    ...(linkedinUrl(D.linkedin) ? [["LinkedIn", linkedinUrl(D.linkedin)]] : [])
   ];
   $("contactLinks").append(...links.map(([t, h]) => el("a", { href: h, text: t })));
 
