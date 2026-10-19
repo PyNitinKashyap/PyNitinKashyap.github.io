@@ -11,7 +11,7 @@ const PORTFOLIO = {
 
   // >>> CHANGE THESE <<<
   github: "PyNitinKashyap",        // used to load your live repositories
-  linkedin: "www.linkedin.com/in/nitin-kashyap-324366280",
+  linkedin: "https://www.linkedin.com/in/nitin-kashyap-324366280/",
 
   // Resume holder: put your PDF at this path inside the repo
   resumeFile: "resume/Nitin_Kashyap_Resume.pdf",
