@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Nitin Kashyap | Data Engineer</title>
+  <meta name="description" content="Portfolio of Nitin Kashyap, Data Engineer: ETL pipelines, FastAPI, MongoDB, web scraping, OCR and LLM apps.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="nav">
+    <a class="brand" href="#top" id="brand">NK</a>
+    <nav>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#experience">Experience</a>
+      <a href="#projects">Projects</a>
+      <a href="#github">GitHub</a>
+      <a href="#resume">Resume</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <button id="themeBtn" class="icon-btn" aria-label="Toggle theme">◐</button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <p class="eyebrow">Hello, I'm</p>
+      <h1 id="heroName"></h1>
+      <h2 class="role"><span id="roleText"></span><span class="caret">|</span></h2>
+      <p class="lead" id="heroSummary"></p>
+      <div class="cta">
+        <a class="btn primary" href="#projects">View projects</a>
+        <a class="btn" id="heroResume" href="#resume">Resume</a>
+        <a class="btn ghost" href="#contact">Contact me</a>
+      </div>
+      <div class="stats" id="stats"></div>
+    </section>
+
+    <section id="about" class="reveal">
+      <h3 class="sec">About</h3>
+      <p id="aboutText"></p>
+      <div class="meta" id="aboutMeta"></div>
+    </section>
+
+    <section id="skills" class="reveal">
+      <h3 class="sec">Skills</h3>
+      <div id="skillGrid" class="skill-grid"></div>
+    </section>
+
+    <section id="experience" class="reveal">
+      <h3 class="sec">Experience</h3>
+      <div id="timeline" class="timeline"></div>
+    </section>
+
+    <section id="projects" class="reveal">
+      <h3 class="sec">Projects</h3>
+      <div id="filters" class="filters"></div>
+      <div id="projectGrid" class="cards"></div>
+    </section>
+
+    <section id="github" class="reveal">
+      <h3 class="sec">Live from GitHub</h3>
+      <p class="muted" id="ghNote"></p>
+      <div id="repoGrid" class="cards"></div>
+    </section>
+
+    <section id="resume" class="reveal">
+      <h3 class="sec">Resume</h3>
+      <div class="resume-bar">
+        <a class="btn primary" id="dlResume" download>⬇ Download PDF</a>
+        <a class="btn" id="openResume" target="_blank" rel="noopener">Open in new tab</a>
+        <button class="btn ghost" id="toggleViewer">Hide preview</button>
+      </div>
+      <div id="viewerWrap" class="viewer">
+        <iframe id="resumeFrame" title="Resume preview"></iframe>
+        <p id="resumeMissing" class="muted" hidden></p>
+      </div>
+      <div class="two-col">
+        <div><h4>Education</h4><div id="edu"></div></div>
+        <div><h4>Certifications</h4><ul id="certs"></ul><h4>Languages</h4><ul id="langs"></ul></div>
+      </div>
+    </section>
+
+    <section id="contact" class="reveal">
+      <h3 class="sec">Contact</h3>
+      <div id="contactLinks" class="contact"></div>
+    </section>
+  </main>
+
+  <footer><span id="year"></span> · Built with plain HTML, CSS &amp; JS · Hosted on GitHub Pages</footer>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
