@@ -9,12 +9,12 @@ A dynamic, no-build portfolio. All content is rendered from **`data.js`**, so yo
 - Project filter by technology, dark/light theme, animated role text
 
 ## Setup (5 minutes)
-1. Create a repo named `<your-username>.github.io` (or any repo name).
+1. Create a repo named `PyNitinKashyap.github.io` (or any repo name).
 2. Upload everything in this folder to it.
 3. Put your resume PDF at `resume/Nitin_Kashyap_Resume.pdf` (create the `resume` folder).
 4. Edit `data.js`: set `github`, `linkedin`, and add `repo` links to your projects.
 5. Repo **Settings → Pages → Deploy from branch → `main` / root**.
-6. Your site goes live at `https://<your-username>.github.io/`.
+6. Your site goes live at `https://PyNitinKashyap.github.io/`.
 
 ## Run locally
 ```bash
